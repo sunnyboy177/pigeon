@@ -1,0 +1,198 @@
+2016-12-17 15:42:43 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php:602
+Stack trace:
+#0 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(602): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(544): yii\db\Connection->createPdoInstance()
+#2 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#3 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#4 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Schema.php(147): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/MigrateController.php(199): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(771): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(135): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /mnt/hgfs/development/wwwroot/gesai.test.com/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php:549
+Stack trace:
+#0 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#1 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#2 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Schema.php(147): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/MigrateController.php(199): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(771): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(135): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /mnt/hgfs/development/wwwroot/gesai.test.com/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-12-17 15:42:43 [-][-][-][info][application] $_SERVER = [
+    'HOSTNAME' => 'localhost.localdomain'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'HADOOP_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'HISTSIZE' => '1000'
+    'SSH_CLIENT' => '192.168.59.1 64642 22'
+    'QTDIR' => '/usr/lib/qt-3.3'
+    'OLDPWD' => '/mnt/hgfs/development/wwwroot/gesai.test.com/backend'
+    'QTINC' => '/usr/lib/qt-3.3/include'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'HADOOP_COMMON_LIB_NATIVE_DIR' => '/opt/hadoop/hadoop-2.6.4/lib/native'
+    'MAIL' => '/var/spool/mail/root'
+    'PATH' => '/usr/lib/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/opt/hadoop/hadoop-2.6.4/bin:/opt/hadoop/hadoop-2.6.4/sbin:/opt/hadoop/hadoop-2.6.4/lib'
+    'HADOOP_HDFS_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'HADOOP_COMMON_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'PWD' => '/mnt/hgfs/development/wwwroot/gesai.test.com'
+    'HADOOP_YARN_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'HADOOP_CONF_DIR' => '/opt/hadoop/hadoop-2.6.4/etc/hadoop'
+    'LANG' => 'en_US.UTF-8'
+    'HADOOP_OPTS' => '-Djava.library.path=/opt/hadoop/hadoop-2.6.4/lib'
+    'SSH_ASKPASS' => '/usr/libexec/openssh/gnome-ssh-askpass'
+    'HISTCONTROL' => 'ignoredups'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'HADOOP_MAPRED_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'LOGNAME' => 'root'
+    'QTLIB' => '/usr/lib/qt-3.3/lib'
+    'CVS_RSH' => 'ssh'
+    'SSH_CONNECTION' => '192.168.59.1 64642 192.168.59.154 22'
+    'LESSOPEN' => '|/usr/bin/lesspipe.sh %s'
+    'G_BROKEN_FILENAMES' => '1'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1481960563.2675
+    'REQUEST_TIME' => 1481960563
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-12-17 15:43:13 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php:602
+Stack trace:
+#0 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(602): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(544): yii\db\Connection->createPdoInstance()
+#2 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#3 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#4 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Schema.php(147): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/MigrateController.php(199): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(771): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(135): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#17 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /mnt/hgfs/development/wwwroot/gesai.test.com/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php:549
+Stack trace:
+#0 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#1 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#2 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/db/Schema.php(147): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/MigrateController.php(199): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(771): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(135): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('', Array)
+#15 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /mnt/hgfs/development/wwwroot/gesai.test.com/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /mnt/hgfs/development/wwwroot/gesai.test.com/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-12-17 15:43:13 [-][-][-][info][application] $_SERVER = [
+    'HOSTNAME' => 'localhost.localdomain'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'HADOOP_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'HISTSIZE' => '1000'
+    'SSH_CLIENT' => '192.168.59.1 64642 22'
+    'QTDIR' => '/usr/lib/qt-3.3'
+    'OLDPWD' => '/mnt/hgfs/development/wwwroot/gesai.test.com/backend'
+    'QTINC' => '/usr/lib/qt-3.3/include'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'HADOOP_COMMON_LIB_NATIVE_DIR' => '/opt/hadoop/hadoop-2.6.4/lib/native'
+    'MAIL' => '/var/spool/mail/root'
+    'PATH' => '/usr/lib/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/opt/hadoop/hadoop-2.6.4/bin:/opt/hadoop/hadoop-2.6.4/sbin:/opt/hadoop/hadoop-2.6.4/lib'
+    'HADOOP_HDFS_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'HADOOP_COMMON_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'PWD' => '/mnt/hgfs/development/wwwroot/gesai.test.com'
+    'HADOOP_YARN_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'HADOOP_CONF_DIR' => '/opt/hadoop/hadoop-2.6.4/etc/hadoop'
+    'LANG' => 'en_US.UTF-8'
+    'HADOOP_OPTS' => '-Djava.library.path=/opt/hadoop/hadoop-2.6.4/lib'
+    'SSH_ASKPASS' => '/usr/libexec/openssh/gnome-ssh-askpass'
+    'HISTCONTROL' => 'ignoredups'
+    'SHLVL' => '1'
+    'HOME' => '/root'
+    'HADOOP_MAPRED_HOME' => '/opt/hadoop/hadoop-2.6.4'
+    'LOGNAME' => 'root'
+    'QTLIB' => '/usr/lib/qt-3.3/lib'
+    'CVS_RSH' => 'ssh'
+    'SSH_CONNECTION' => '192.168.59.1 64642 192.168.59.154 22'
+    'LESSOPEN' => '|/usr/bin/lesspipe.sh %s'
+    'G_BROKEN_FILENAMES' => '1'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1481960593.049
+    'REQUEST_TIME' => 1481960593
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
